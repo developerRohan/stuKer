@@ -7,7 +7,12 @@
 				<blockquote><%= Time.zone.name %> Time Zone</blockquote>
 			</div>
 			<div class="social">
-				
+				<% unless current_user.connections.where(provider: "twitter").any? %>
+				<%= link_to 'connect to twitter' , "/auth/twitter" , class: "btn btn-info btn-block btn-sm" %>
+				<% else %>
+				<%= link_to 'connected to twitter' , "/auth/twitter" , class: "btn btn-warning btn-block btn-sm" %>
+				<%= link_to 'disconnect from twitter' , connection_path(current_user.connections.where(provider: "twitter").first) ,method: :delete, class: "btn btn-danger btn-block btn-sm" %>
+				<% end %>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-offset-1">

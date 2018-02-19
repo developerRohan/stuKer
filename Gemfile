@@ -56,3 +56,4 @@ gem 'devise'
 
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' , groups: [:development]
+gem 'omniauth-twitter', '~> 1.4'
