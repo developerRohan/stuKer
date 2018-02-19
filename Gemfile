@@ -55,3 +55,4 @@ gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'devise'
 
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' , groups: [:development]
