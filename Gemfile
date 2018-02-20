@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.5'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'net_http_ssl_fix', '~> 0.0.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -57,3 +58,4 @@ gem 'devise'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' , groups: [:development]
 gem 'omniauth-twitter', '~> 1.4'
+gem 'omniauth-facebook', '~> 4.0'
