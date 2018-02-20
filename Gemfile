@@ -57,8 +57,14 @@ gem 'devise'
 
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' , groups: [:development]
+
 gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-facebook', '~> 4.0'
+
 gem 'validates_timeliness', '~> 4.0', '>= 4.0.2'
+
 gem 'twitter', '~> 6.2'
 gem 'koala', '~> 3.0'
+
+gem 'delayed_job_active_record'
+gem 'delayed-web', '~> 0.4.4'
