@@ -59,3 +59,4 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' , groups: [:development]
 gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-facebook', '~> 4.0'
+gem 'validates_timeliness', '~> 4.0', '>= 4.0.2'
