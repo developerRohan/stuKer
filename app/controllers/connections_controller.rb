@@ -16,6 +16,10 @@ class ConnectionsController < ApplicationController
   	redirect_to dashboard_path
   end
 
+  def omniauth_failure
+    redirect_to dashboard_path , notice: 'something went wromg . try again later.'
+  end
+
   private
 
   def set_connection
