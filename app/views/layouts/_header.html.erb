@@ -5,13 +5,14 @@
 				 
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-				</button> <a class="navbar-brand" href="#">Brand</a>
+				</button> <a class="navbar-brand" href="<%= dashboard_path %>">StUkEr</a>
 			</div>
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				
 				
 				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to 'new post' , new_post_path%></li>
 					<% if user_signed_in? %>
 					  	<li><%= link_to 'settings' ,  edit_user_registration_path %></li>
 						<li><%= link_to 'log out' ,   destroy_user_session_path , method: :delete %></li>
