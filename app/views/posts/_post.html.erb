@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<% if post.facebook==true %><span class="label label-primary">FACEBOOK</span><% end %>
+			<% if post.twitter==true %><span class="label label-primary">TWITTER</span><% end %>
+		</h3>
+		Scheduled at:<%= post.scheduled_at %> 
+	</div>
+	<div class="panel-body">
+		<%= post.content %>
+	</div>
+	<div class="panel-footer">
+		<%= post.state.capitalize%>
+	</div>
+</div>
