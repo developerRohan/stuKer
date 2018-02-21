@@ -24,12 +24,14 @@
 			<h1>Scheduled Posts</h1>
 			<hr>
 			<%= render @scheduled %>
+			<%= will_paginate @scheduled  , :param_page => 'scheduled_page'%>
 		</div>
 		
 		<div class="col-md-4 col-sm-offset-1">
 			<h1>Posts History</h1>
 			<hr>
 			<%= render @history %>
+			<%= will_paginate @history , :param_page => 'history_page' %>
 		</div>		
 	</div>
 

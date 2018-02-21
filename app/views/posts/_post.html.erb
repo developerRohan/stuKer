@@ -3,6 +3,12 @@
 		<h3 class="panel-title">
 			<% if post.facebook==true %><span class="label label-primary">FACEBOOK</span><% end %>
 			<% if post.twitter==true %><span class="label label-primary">TWITTER</span><% end %>
+			<% if post.state == 'scheduled' %>
+			<%= link_to 'cancel post' , cancel_post_path(post) ,method: :put, class: 'label label-info' %>
+			<% else %>
+			<%= link_to 'delete post' , post ,method: :delete, class: 'label label-danger' %>
+			<% end %>
+
 		</h3>
 		Scheduled at:<%= post.scheduled_at %> 
 	</div>

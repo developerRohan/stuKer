@@ -68,3 +68,5 @@ gem 'koala', '~> 3.0'
 
 gem 'delayed_job_active_record'
 gem 'delayed-web', '~> 0.4.4'
+
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'

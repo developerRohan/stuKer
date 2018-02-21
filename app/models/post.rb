@@ -18,6 +18,7 @@ class Post < ApplicationRecord
 
 	def display
 		begin
+		  unless state == "canceled"
 			if twitter == true
 				to_twitter
 			end
@@ -25,6 +26,7 @@ class Post < ApplicationRecord
 				to_facebook
 			end
 			self.update_attributes(state:'posted')
+		  end
 		rescue Exception => e
 			self.update_attributes(state: 'scheduled error' , error: e.message)
 		end

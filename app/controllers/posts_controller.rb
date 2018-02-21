@@ -16,7 +16,20 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def cancel
+		@post = Post.find(params[:id])
+		@post.update_attributes(state: 'canceled')
+		redirect_to dashboard_path ,notice: 'post was canceled'
+	end
+
+	def destroy
+		@post = Post.find(params[:id])
+		@post.destroy
+		redirect_to dashboard_path
+	end
+
 	private
+
 
 	def post_params
 		params.require(:post).permit(:content , :scheduled_at , :state , :user_id , :facebook , :twitter)
