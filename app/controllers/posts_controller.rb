@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :authenticate_user!
 	def new
 		if current_user.connections.any?
 			@post = Post.new

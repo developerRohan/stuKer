@@ -2,3 +2,8 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.jumbotron{
+	background-image: asset-url('facebook-scheduler.jpg');
+	background-size:cover;
+}
